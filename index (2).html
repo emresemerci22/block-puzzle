@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Mozaik – Blok Bulmaca</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="app">
+  <header>
+    <h1>Mozaik</h1>
+    <div class="bar">
+      <div class="stat">SCORE: <b id="score">0</b></div>
+      <div class="stat">BEST: <b id="best">0</b></div>
+      <button id="btnSound" class="icon" aria-label="Sesi aç/kapat">🔊</button>
+      <button id="btnNew" class="icon" aria-label="New Game">↻</button>
+    </div>
+  </header>
+
+  <div id="boardWrap">
+    <canvas id="board"></canvas>
+    <div id="popup"></div>
+  </div>
+
+  <div id="tray">
+    <div class="slot"><canvas></canvas></div>
+    <div class="slot"><canvas></canvas></div>
+    <div class="slot"><canvas></canvas></div>
+  </div>
+</main>
+
+<div id="over" class="hidden">
+  <div class="card">
+    <h2>GAME OVER</h2>
+    <p>Final Score <b id="finalScore">0</b></p>
+    <p>Best Score <b id="finalBest">0</b></p>
+    <button id="btnRestart" class="primary">Restart Game</button>
+  </div>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
